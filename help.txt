@@ -1,0 +1,6 @@
+all - Show all Pipole
+student- Show all Student
+facultet - Show all facultet
+add - add a person and enroll in students
+del surname  - delete student
+search surname  - search student
