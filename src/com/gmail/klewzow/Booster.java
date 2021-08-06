@@ -60,10 +60,10 @@ public class Booster {
 			System.out.println("  facultet - " + f.getFacultet());
 			System.out.println();
 			for (GroupStudent gs : f.getGroups()) {
-				System.out.println("Curse - " + gs.getCourse() + "Student - " + gs.getGroup().length);
+				System.out.println("\nCurse - " + gs.getCourse() + " Student - " + gs.getGroup().length);
 				for (Student st : gs.getGroup()) {
-					System.out.println("Name - " + st.getHuman().getName() + "  " + st.getHuman().getSurname()
-							+ " Age - " + st.getHuman().getAge() + " Student - " + st.isStudent());
+					System.out.println("Name - " + st.getName() + "  " + st.getSurname()
+							+ " Age - " + st.getAge() + " Student - " + st.isStudent());
 				}
 			}
 			System.out.println();
@@ -101,19 +101,19 @@ public class Booster {
 	}
 
 	private Student search(String str, Student st, GroupStudent gs) {
-		if ((st.getHuman().getSurname()).equals(str)) {
+		if ((st.getSurname()).equals(str)) {
 
-			System.out.println("Name - " + st.getHuman().getName() + "  " + st.getHuman().getSurname() + " Age - "
-					+ st.getHuman().getAge() + "  Group number - " + gs.getNumberGroup() + "  Facultet - "
-					+ gs.getFacultet());
+			System.out.println("Name - " + st.getName() + ", " + st.getSurname() + ", Age - "
+					+ st.getAge() + ",  Group number - " + gs.getNumberGroup() + ",  Facultet - "
+					+ gs.getFacultet() +",  Student - " + st.isStudent());
 			return st;
 		}
 		return null;
 	}
 
 	private Student delStudent(Student st, String str, GroupStudent gs) {
-		if (str.equals(st.getHuman().getSurname())) {
-			System.out.println(st.getHuman().getSurname());
+		if (str.equals(st.getSurname())) {
+			System.out.println(st.getSurname());
 			gs.delStudentInGroup(st);
 			return st;
 		}
@@ -133,7 +133,7 @@ public class Booster {
 		if (r.equals("Y")) {
 			newStudent = createStudent(tmp, sc);
 			save = false;
-			System.out.println("Student - " + newStudent.getHuman().getName() + " " + newStudent.getHuman().getSurname()
+			System.out.println("Student - " + newStudent.getName() + " " + newStudent.getSurname()
 					+ " added");
 		} else {
 			System.out.println("Human - " + tmp + " create");

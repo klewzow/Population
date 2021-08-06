@@ -10,8 +10,8 @@ public class Main {
 		 console.getTr();
 		System.out.println("end app");
 
-//		Population pop = new Population();
-
+// 		Population pop = new Population();
+//
 //		Human h1 = new Human("Vova", "Ivanov", 15, "212-05-52");
 //		Human h2 = new Human("Toma", "Ivanova", 25, "645-05-52");
 //
@@ -33,8 +33,9 @@ public class Main {
 //		Facultet fc = new Facultet();
 //		fc.addGrupsToFacultet(gs2);
 //		fc.addGrupsToFacultet(gs);
+//		System.out.println("name - " + h1.getSurname());
 //for (Student string : gs.getGroup()) {
-//	System.out.println(string);
+//	System.out.println(string.getSurname());
 //}
 	}
 

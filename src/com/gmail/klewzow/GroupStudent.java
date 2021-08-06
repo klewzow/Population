@@ -46,7 +46,7 @@ public class GroupStudent implements Serializable {
 		Arrays.sort(this.group,
 				((a, b) -> (SortInterface.sortInterface(a, b) != SortInterface.NOT_NULL
 						? SortInterface.sortInterface(a, b)
-						: a.getHuman().getId() - b.getHuman().getId())));
+						: a.getId() - b.getId())));
 
 	}
 

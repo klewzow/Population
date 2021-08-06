@@ -2,7 +2,7 @@ package com.gmail.klewzow;
 
 import java.io.Serializable;
 
-public class Student implements Serializable {
+public class Student extends Human implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private Human human;
@@ -13,12 +13,14 @@ public class Student implements Serializable {
 	}
 
 	public Student(Human human) {
-		super();
+		super(human.getName(), human.getSurname(), human.getAge(), human.getPhone());
 		this.human = human;
 		this.student = true;
 	}
 
-	public Human getHuman() {
+ 
+
+	public Human getStudent() {
 		return human;
 	}
 
@@ -29,7 +31,18 @@ public class Student implements Serializable {
 	public boolean isStudent() {
 		return student;
 	}
-
+	@Override
+	public String getName() {
+		return getStudent().getName();
+	}
+	@Override
+	public String getSurname() {
+		return getStudent().getSurname();
+	}
+	@Override
+	public int getAge() {
+		return getStudent().getAge();
+	}
 	public void setStudent(boolean student) {
 		this.student = student;
 	}

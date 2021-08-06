@@ -51,6 +51,8 @@ public class ConsoleMy implements Runnable {
 		} else if (str.equals("add")) {
 			booster.addStudent();
 			booster.saveData(booster.getFc());
+		} else {
+			System.out.println("Command not found");
 		}
 	}
 
@@ -60,6 +62,8 @@ public class ConsoleMy implements Runnable {
 		} else if (str[0].equals("del")) {
 			booster.searchStudent(str[1], 1);
 			booster.saveData(booster.getFc());
+		}else {
+			System.out.println("Command not found");
 		}
 	}
 
